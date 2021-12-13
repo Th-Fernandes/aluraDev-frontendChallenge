@@ -5,6 +5,19 @@ $blue-200: #7BA4FC;
 $blue-100: #96B9FD;
 $white: #ffffff;
 
+@keyframes up {
+    from {
+        top: 50px;
+        opacity: 0; 
+        filter: blur(3px); 
+    }
+    to {
+        top: 0px; 
+        opacity: 1; 
+        filter: blur(0px)
+    }
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -148,20 +161,55 @@ body {
                     margin-bottom: 1.4rem;
                 }
 
-                .opcoes-menu {
+                .opcoes-menu {                  
                     .opcao-menu {
-                        display: flex;
-                        align-items: center;
-
-                        &:not(:last-child) {
-                            margin-bottom: 1.6rem;
+                        &:not(:last-child){
+                            margin-bottom: 1.6rem
                         }
+                        
+                        > button {
+                            display: flex;
+                            align-items: center;
+                            color: $white;
+                            width: 100%;
+                            background-color: transparent;
+                            border: none;
 
-                        > img {
-                            margin-right: 1.6rem;
+                            .opcao-icone {
+                                margin-right: 1.6rem;
+                            }
+
+                            > p {
+                                font-size: 1.6rem;
+                            }
                         }
                     }
                 }
+            }
+        }
+
+        section.criacao-projeto {
+            display: none;
+            visibility: hidden;
+            position: relative;
+            
+
+            &.active {
+                display: flex;
+                visibility: visible;
+                animation: 0.75s up;
+            }
+        }
+
+        section.projetosComunidade {
+            display: none;
+            visibility: hidden;
+            position: relative;
+
+            &.active {
+                display: block;
+                visibility: visible;
+                animation: 0.75s up;
             }
         }
     }

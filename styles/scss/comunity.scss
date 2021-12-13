@@ -2,16 +2,21 @@
 
 body {
   main {
-    #projetosComunidade {
+    section.projetosComunidade {
       max-width: 1064px;
+      display: none;
+      visibility: hidden;
+
       .codigo-container {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        flex-wrap: wrap;
         
         
         .codigo-comunidade {
           width: 52rem;
+          margin-bottom: 2.4rem;
 
           .codigo-content {
             min-height: 28.8rem;
@@ -19,6 +24,16 @@ body {
             width: 100%;
             border-radius: 0.8rem;
             padding: 1.2rem;
+
+            .botoes-mac {
+              > img {
+                &:not(:last-child) {
+                  margin-right: 0.8rem;
+                }
+              }
+                
+              
+            }
             
             #areaCodigo {              
               #codigo {
@@ -78,6 +93,25 @@ body {
                 }
               }
             }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 1024px) {
+  body {
+    main {
+      justify-content: center;
+      padding: 0; 
+      section.projetosComunidade {
+        .codigo-container {
+          width: 100%;
+          .codigo-comunidade {
+            width: 90%;
+            margin: 0 auto 3.2rem;
+            
           }
         }
       }

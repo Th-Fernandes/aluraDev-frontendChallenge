@@ -1,3 +1,15 @@
+@keyframes up {
+  from {
+    top: 50px;
+    opacity: 0;
+    filter: blur(3px);
+  }
+  to {
+    top: 0px;
+    opacity: 1;
+    filter: blur(0px);
+  }
+}
 * {
   padding: 0;
   margin: 0;
@@ -118,15 +130,42 @@ body main section.nav-section #menu > h2 {
   letter-spacing: 0.25rem;
   margin-bottom: 1.4rem;
 }
-body main section.nav-section #menu .opcoes-menu .opcao-menu {
-  display: flex;
-  align-items: center;
-}
 body main section.nav-section #menu .opcoes-menu .opcao-menu:not(:last-child) {
   margin-bottom: 1.6rem;
 }
-body main section.nav-section #menu .opcoes-menu .opcao-menu > img {
+body main section.nav-section #menu .opcoes-menu .opcao-menu > button {
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+}
+body main section.nav-section #menu .opcoes-menu .opcao-menu > button .opcao-icone {
   margin-right: 1.6rem;
+}
+body main section.nav-section #menu .opcoes-menu .opcao-menu > button > p {
+  font-size: 1.6rem;
+}
+body main section.criacao-projeto {
+  display: none;
+  visibility: hidden;
+  position: relative;
+}
+body main section.criacao-projeto.active {
+  display: flex;
+  visibility: visible;
+  animation: 0.75s up;
+}
+body main section.projetosComunidade {
+  display: none;
+  visibility: hidden;
+  position: relative;
+}
+body main section.projetosComunidade.active {
+  display: block;
+  visibility: visible;
+  animation: 0.75s up;
 }
 
 @media (max-width: 1024px) {
