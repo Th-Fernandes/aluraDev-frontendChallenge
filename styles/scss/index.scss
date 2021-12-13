@@ -1,0 +1,157 @@
+@import "./global.scss";
+
+$dark-gray: #141414;
+
+body {
+    main {
+        section.criacao-projeto {
+            display: flex;
+            justify-content: center;
+            //margin-right: 3.2rem;
+            .codigo-container {
+                margin-right: 4rem;
+                .codigo-usuario {
+                    width: 75.2rem;
+                    min-height: 36.6rem;
+                    border: 32px solid #6BD1FF;
+                    border-radius: 8px;
+                    padding: 1.6rem;
+                    background-color: $dark-gray;
+    
+                    .botoes-mac {
+                        margin-bottom: 2.4rem;
+                        > img {
+                            &:not(:last-child) {
+                                margin-right: 0.8rem;
+                            }
+                        }
+                    }
+    
+                    #areaCodigo {
+                        width: 100%;
+                        height: 100%;
+    
+                        #codigo {
+                            width: 100%;
+                            min-height: 30rem;
+                            resize: none;
+                            background-color: transparent;
+                            border: none;
+                            color: $white;
+                            overflow-x: hidden;
+                            font-size: 1.4rem;
+                        }
+                    }
+                }
+    
+                #highlight {
+                    width: 75.2rem;
+                    height: 5.6rem;
+                    background-color: rgba($color: $blue-300, $alpha: 8%);
+                    color: $white;
+                    margin-top: 3.2rem;
+                    border: none;
+    
+                }
+            }
+
+            .dados-projeto {
+                width: 27.2rem;
+
+                > h2 {
+                    font-size: 1.2rem;
+                    letter-spacing: .75rem;
+                    margin-bottom: 1.4rem;
+                }
+
+                .caracteristicas-projeto {
+                    #nomeProjeto {
+                        height: 5.6rem;
+                        margin-bottom: 1.6rem;
+                    }
+
+                    #descricaoProjeto {
+                        height: 8rem;
+                    }
+                }
+
+                .personalizar-projeto {
+                    margin-top: 4rem;
+
+                    > h2 {
+                        margin-bottom: 1.6rem;
+                    }
+
+                    .estilizacao-projeto {
+                        #linguagemProjeto {
+                            height: 5.6rem;
+                            color: $white;
+                            margin-bottom: 1.6rem;
+                                > option {
+                                    background-color: rgba($color: $dark-blue, $alpha: .7);
+                                }
+                        }
+
+                        #corProjeto {
+                            padding: .8rem;
+                            margin-bottom: 3.2rem;
+                            height: 5.6rem;
+                            border: 1px solid $white;
+                        }
+                    }
+                }
+
+                #salvarProjeto {
+                    width: 100%;
+                    height: 5.6rem;
+                    background-color: $blue-300;
+                    color: $dark-gray;
+                    font-size: 1.6rem;
+                    border: none;
+                    border-radius: 8px;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 1200px) {
+    body {
+        main {
+    
+            section.criacao-projeto {
+                flex-wrap: wrap;
+                width: 100%;
+                margin-bottom: 4rem;
+    
+                .codigo-container {
+                    width: 100%;
+                    margin-right: 0;
+    
+                    .codigo-usuario {
+                        width: 100%;
+                    }
+
+                    #highlight {
+                        width: 100%;
+                    }
+                }
+
+                .dados-projeto {
+                    margin-top: 4rem;
+                    width: 100%;
+
+                    .personalizar-projeto {
+                        .estilizacao-projeto {
+                            display: flex;
+
+                            #linguagemProjeto {
+                                margin-right: 1.6rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,188 @@
+//colors 
+$dark-blue: #051D3B;
+$blue-300: #5081FB;
+$blue-200: #7BA4FC;
+$blue-100: #96B9FD;
+$white: #ffffff;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+
+    li {
+        list-style-type: none;
+    }
+
+    label {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border-width: 0;
+    }
+    //global input settings
+
+    input, select {
+        width: 100%;
+        display: block;
+        background-color: rgba($color: $white, $alpha: 0.16);
+        border: none;
+        border-radius: 8px;
+        padding-left: 1.4rem;
+        
+        &::placeholder {
+            font-size: 1.6rem;
+        }
+
+        &:hover {
+            background-color: rgba($color:  $white, $alpha: 0.24);
+        }
+    }
+
+    select {
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    //global button settings
+    button {
+        cursor: pointer;
+    }
+    //global textarea settings
+    textarea {
+        resize: none;
+    }
+}
+// global text settings
+:root {
+    font-family: 'Inter', sans-serif;
+    color: $white;
+}
+//global body settings
+body {
+    background-color: $dark-blue;
+    max-width: 144rem;
+    margin: 0 auto;
+    height: 100vh;
+    //global header settings
+    header.main-header {
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.6rem;
+        align-items: center;
+        padding: 3.2rem 3.2rem 0;
+        margin-bottom: 4rem;
+
+        #barraPesquisa {
+            width: min(75.2rem);
+            min-height: 5.6rem;
+            background-color: rgba($color:  $white, $alpha: 0.16);
+            color: $white;
+            border: none;
+            border-radius: 8px;
+            margin-right: 4rem;
+            padding-left: 1.6rem;
+
+            &::placeholder {
+                font-size: 1.6rem;
+            }
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        .perfil-usuario {
+            min-width: 10.6rem;
+            height: 5.6rem;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.5s background-color;
+
+            &:hover {
+                background-color: rgba($color: $white, $alpha: 0.08);
+            }
+
+            .perfil-opcoes {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: transparent;
+                border: none;
+
+                #foto-usuario {
+                    margin-right: 0.8rem;
+                }
+                #nome-usuario {
+                    color: $white;
+                }
+            }
+        }
+    }
+    //global main settings
+    main {
+        display: flex;
+        padding: 0 3.2rem;
+
+        section.nav-section {
+            width: 31.2rem;
+            //margin-left: 3.2rem;
+            font-size: 1.6rem;
+
+            #menu {
+                > h2 {
+                    font-size: 1.2rem;
+                    letter-spacing: 0.25rem;
+                    margin-bottom: 1.4rem;
+                }
+
+                .opcoes-menu {
+                    .opcao-menu {
+                        display: flex;
+                        align-items: center;
+
+                        &:not(:last-child) {
+                            margin-bottom: 1.6rem;
+                        }
+
+                        > img {
+                            margin-right: 1.6rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 1024px) {
+    body {
+        header.main-header {
+            
+            
+            #barraPesquisa {
+                width: 43.1rem;
+                margin-right: 0;
+            }
+        }
+
+        main {
+            section.nav-section {
+                display: none;
+                visibility: hidden;
+            }
+        }
+    }
+}

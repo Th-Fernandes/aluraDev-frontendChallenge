@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--CSS-->
+    <link rel="stylesheet" href="./styles/css/global.css">
+    <!--<link id="index" rel="stylesheet" href="./styles/css/index.css">-->
+    <link rel="stylesheet" href="./styles/css/comunity.css">
+    <!--FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <title>ALURA DEV</title>
+</head>
+
+<body>
+    <header class="main-header">
+        <img src="./images/Logo.svg" alt="alura dev logo" id="logo">
+        <input id="barraPesquisa" type="text" placeholder="Busque por algo">
+        <div class="perfil-usuario">
+            <button class="perfil-opcoes">
+                <img src="./images/foto-perfil.svg" alt="sua foto de perfil" id="foto-usuario">
+                <p id="nome-usuario">Harry</p>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="nav-section">
+            <nav id="menu">
+                <h2>M E N U</h2>
+
+                <ul class="opcoes-menu">
+                    <li id="editorCodigo" class="opcao-menu">
+                        <img src="./images/editor.svg" alt="">
+                        <p>Editor de código</p>    
+                    </li>
+                    <li id="comunidade" class="opcao-menu">
+                        <img src="./images/comunidade.svg" alt="">
+                        <p>Comunidade</p>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+
+        <!--
+            <section class="criacao-projeto">
+            <div class="codigo-container">
+                <div class="codigo-usuario">
+                    <header class="botoes-mac">
+                        <img src="./images/mac-red.svg" alt="">
+                        <img src="./images/mac-yellow.svg" alt="">
+                        <img src="./images/mac-green.svg" alt="">
+                    </header>
+    
+                    <code id="areaCodigo">
+                        <textarea name="" id="codigo">
+const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
+    
+const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
+    
+const unfold = (f, seed) => {
+const go = (f, seed, acc) => {
+    const res = f(seed)
+    return res ? go(f, res[1], acc.concat([res[0]])) : acc
+}
+return go(f, seed, [])
+}
+                        </textarea>
+                    </code>
+                </div>
+    
+                <button id="highlight">Visualizar com o highlight</button>
+            </div>
+
+            <form action="" class="dados-projeto">
+                <h2>SEU PROJETO</h2>
+
+                <div class="caracteristicas-projeto">
+                    <label for="nomeProjeto">digite o nome do seu projeto</label>
+                    <input type="text" id="nomeProjeto" placeholder="Nome do seu projeto">
+
+                    <label for="descricaoProjeto">Descrição do seu projeto</label>
+                    <input type="text" id="descricaoProjeto" placeholder="Descrição do seu projeto">
+                </div>
+
+                <div class="personalizar-projeto">
+                        <h2>PERSONALIZAÇÃO</h2>
+
+                        <div class="estilizacao-projeto">
+                            <select name="language" id="linguagemProjeto">
+                                <option value="html">HTML</option>
+                                <option value="css">CSS</option>
+                                <option value="js">JavaScript</option>
+                            </select>
+
+                            <label for="corProjeto">selecione a cor do projeto</label>
+                            <input type="color" id="corProjeto">
+                        </div>
+                </div>
+
+                <button id="salvarProjeto">salvar projeto</button>
+            </form>
+        </section>
+        -->
+        
+            <section id="projetosComunidade">
+            <ul class="codigo-container">
+                <li class="codigo-comunidade">
+                    <div class="codigo-content">
+                        <header class="botoes-mac">
+                            <img src="./images/mac-red.svg" alt="">
+                            <img src="./images/mac-yellow.svg" alt="">
+                            <img src="./images/mac-green.svg" alt="">
+                        </header>
+        
+                        <code id="areaCodigo">
+                            <textarea 	readonly id="codigo">
+    const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
+        
+    const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
+        
+    const unfold = (f, seed) => {
+    const go = (f, seed, acc) => {
+        const res = f(seed)
+        return res ? go(f, res[1], acc.concat([res[0]])) : acc
+    }
+    return go(f, seed, [])
+    }
+                            </textarea>
+                        </code>
+                    </div>
+
+                    <div class="projeto-dados">
+                        <article>
+                            <h2 class="projeto-titulo">Título do projeto</h2>
+
+                            <p class="projeto-descricao">
+                                Essa é a descrição do meu projeto.
+                            </p>
+                        </article>
+
+                        <div class="projeto-social">
+                            <div class="projeto-interacoes">
+                                <span class="comentarios"> 
+                                    <img src="./images/coments.svg" alt="quantidade de comentários">
+                                    <p>9</p>
+                                </span>
+
+                                <span class="likes">
+                                    <img src="./images/likes.svg" alt="quantidade de curtidas">
+                                    <p>12</p>
+                                </span>
+                            </div>
+
+                            <div class="projeto-autor">
+                                <img src="./images/foto-perfil.svg" alt="">
+                                <span class="autor-tag">@Harry</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </li>
+            </ul>    
+        </section>
+    </main>
+</body>
+</html>
