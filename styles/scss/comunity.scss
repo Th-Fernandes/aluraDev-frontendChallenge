@@ -30,20 +30,17 @@ body {
                 &:not(:last-child) {
                   margin-right: 0.8rem;
                 }
-              }
-                
-              
+              }          
             }
             
             #areaCodigo {              
-              #codigo {
-                width: 100%;
-                background-color: $dark-blue;
-                color: $white;
-                border: none;
-                height: 20rem;
-                
-              }
+              display: block;
+              max-width: 44.8rem;
+              background-color: $dark-blue;
+              color: $white;
+              border: none;
+              height: 20rem;
+              font-size: 1.1rem;
             }
           }
 

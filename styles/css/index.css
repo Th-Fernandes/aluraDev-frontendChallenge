@@ -200,18 +200,25 @@ body main section.criacao-projeto .codigo-container .codigo-usuario .botoes-mac 
   margin-right: 0.8rem;
 }
 body main section.criacao-projeto .codigo-container .codigo-usuario #areaCodigo {
+  display: block;
   width: 100%;
   height: 100%;
+  font-size: 1.6rem;
+  text-align: start;
+  /* 
+   #codigo {
+       width: 100%;
+       min-height: 30rem;
+       resize: none;
+       background-color: transparent;
+       border: none;
+       color: $white;
+       overflow-x: hidden;
+       font-size: 1.4rem;
+   }*/
 }
-body main section.criacao-projeto .codigo-container .codigo-usuario #areaCodigo #codigo {
-  width: 100%;
-  min-height: 30rem;
-  resize: none;
+body main section.criacao-projeto .codigo-container .codigo-usuario #areaCodigo > span {
   background-color: transparent;
-  border: none;
-  color: #ffffff;
-  overflow-x: hidden;
-  font-size: 1.4rem;
 }
 body main section.criacao-projeto .codigo-container #highlight {
   width: 75.2rem;

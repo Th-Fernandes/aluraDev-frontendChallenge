@@ -24,7 +24,6 @@ const menu = {
 
       })
     }
-
 }
 
 export {menu}

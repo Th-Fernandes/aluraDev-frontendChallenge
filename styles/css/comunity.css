@@ -203,12 +203,14 @@ body main section.projetosComunidade .codigo-container .codigo-comunidade .codig
 body main section.projetosComunidade .codigo-container .codigo-comunidade .codigo-content .botoes-mac > img:not(:last-child) {
   margin-right: 0.8rem;
 }
-body main section.projetosComunidade .codigo-container .codigo-comunidade .codigo-content #areaCodigo #codigo {
-  width: 100%;
+body main section.projetosComunidade .codigo-container .codigo-comunidade .codigo-content #areaCodigo {
+  display: block;
+  max-width: 44.8rem;
   background-color: #051D3B;
   color: #ffffff;
   border: none;
   height: 20rem;
+  font-size: 1.1rem;
 }
 body main section.projetosComunidade .codigo-container .codigo-comunidade .projeto-dados {
   margin: 2.4rem 0 0 2.4rem;

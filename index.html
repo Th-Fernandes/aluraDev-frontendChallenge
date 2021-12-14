@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--CSS-->
     <link rel="stylesheet" href="./styles/css/global.css" />
+    <link rel="stylesheet" href="./styles/css/monokai.css">
     <link id="index" rel="stylesheet" href="./styles/css/index.css" />
     <link rel="stylesheet" href="./styles/css/comunity.css">
+    
     <!--FONTS-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -65,22 +67,17 @@
               <img src="./images/mac-green.svg" alt="" />
             </header>
 
-            <code id="areaCodigo">
-              <textarea name="" id="codigo">
-const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
-    
-const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
-    
-const unfold = (f, seed) => {
-const go = (f, seed, acc) => {
-    const res = f(seed)
-    return res ? go(f, res[1], acc.concat([res[0]])) : acc
+            <pre>
+              <code id="areaCodigo" contenteditable="true" >
+const teste = document.querySelector('#popcorn')
+() => {} 
+              
+teste.addEventListener('click', () => console.log('HAHAHA'))
+function test() {
+  return
 }
-return go(f, seed, [])
-}
-            </textarea
-              >
-            </code>
+              </code>
+            </pre>
           </div>
 
           <button id="highlight">Visualizar com o highlight</button>
@@ -95,6 +92,7 @@ return go(f, seed, [])
               type="text"
               id="nomeProjeto"
               placeholder="Nome do seu projeto"
+              required
             />
 
             <label for="descricaoProjeto">Descrição do seu projeto</label>
@@ -134,22 +132,21 @@ return go(f, seed, [])
                 <img src="./images/mac-green.svg" alt="" />
               </header>
 
-              <code id="areaCodigo">
-                <textarea readonly id="codigo">
-    const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
-        
-    const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
-        
-    const unfold = (f, seed) => {
-    const go = (f, seed, acc) => {
-        const res = f(seed)
-        return res ? go(f, res[1], acc.concat([res[0]])) : acc
-    }
-    return go(f, seed, [])
-    }
-                            </textarea
-                >
-              </code>
+              <pre>
+                <code id="areaCodigo">
+const pluckDeep = key => obj => key.split('.').reduce((accum, key) 
+
+const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
+                  
+const unfold = (f, seed) => {
+  const go = (f, seed, acc) => {
+    const res = f(seed)
+    return res ? go(f, res[1], acc.concat([res[0]])) : acc
+  }
+  return go(f, seed, [])
+}
+                </code>
+              </pre>
             </div>
 
             <div class="projeto-dados">
@@ -196,22 +193,20 @@ return go(f, seed, [])
                 <img src="./images/mac-green.svg" alt="" />
               </header>
 
-              <code id="areaCodigo">
-                <textarea readonly id="codigo">
-    const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
-        
-    const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
-        
-    const unfold = (f, seed) => {
-    const go = (f, seed, acc) => {
-        const res = f(seed)
-        return res ? go(f, res[1], acc.concat([res[0]])) : acc
-    }
-    return go(f, seed, [])
-    }
-                            </textarea
-                >
-              </code>
+              <pre>
+                <code id="areaCodigo">
+const pluckDeep = key => obj => key.split('.').reduce((accum, key) 
+
+const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
+                  
+const unfold = (f, seed) => {
+  const go = (f, seed, acc) => {
+    const res = f(seed)
+    return res ? go(f, res[1], acc.concat([res[0]])) : acc
+  }
+  return go(f, seed, [])
+}
+                </code>
             </div>
 
             <div class="projeto-dados">
@@ -258,21 +253,20 @@ return go(f, seed, [])
                 <img src="./images/mac-green.svg" alt="" />
               </header>
 
-              <code id="areaCodigo">
-                <textarea readonly id="codigo">
-    const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
-        
-    const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
-        
-    const unfold = (f, seed) => {
-    const go = (f, seed, acc) => {
-        const res = f(seed)
-        return res ? go(f, res[1], acc.concat([res[0]])) : acc
-    }
-    return go(f, seed, [])
-    }
-                </textarea>
-              </code>
+              <pre>
+                <code id="areaCodigo">
+const pluckDeep = key => obj => key.split('.').reduce((accum, key)
+
+const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
+                  
+const unfold = (f, seed) => {
+  const go = (f, seed, acc) => {
+    const res = f(seed)
+    return res ? go(f, res[1], acc.concat([res[0]])) : acc
+  }
+  return go(f, seed, [])
+}
+                </code>
             </div>
 
             <div class="projeto-dados">
@@ -314,5 +308,7 @@ return go(f, seed, [])
       </section>
     </main>
     <script src="./main.js" type="module"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/highlight.min.js"></script>
+    <script>setTimeout(hljs.highlightAll, 3000 )</script>
   </body>
 </html>
