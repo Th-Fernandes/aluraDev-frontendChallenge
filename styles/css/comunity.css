@@ -117,6 +117,17 @@ body header.main-header .perfil-usuario .perfil-opcoes #foto-usuario {
 body header.main-header .perfil-usuario .perfil-opcoes #nome-usuario {
   color: #ffffff;
 }
+body header.main-header .mobile-header-interacoes {
+  display: none;
+  visibility: hidden;
+}
+body header.main-header .mobile-header-interacoes > button {
+  border: none;
+  background-color: transparent;
+}
+body header.main-header .mobile-header-interacoes > button:first-child {
+  margin-right: 3.2rem;
+}
 body main {
   display: flex;
   padding: 0 3.2rem;
@@ -173,6 +184,10 @@ body main section.projetosComunidade.active {
     width: 43.1rem;
     margin-right: 0;
   }
+  body header.main-header .mobile-header-interacoes {
+    display: block;
+    visibility: visible;
+  }
   body main section.nav-section {
     display: none;
     visibility: hidden;
@@ -187,14 +202,15 @@ body main section.projetosComunidade .codigo-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  flex-wrap: wrap-reverse;
 }
 body main section.projetosComunidade .codigo-container .codigo-comunidade {
-  width: 52rem;
+  width: min(52rem, 90%);
   margin-bottom: 2.4rem;
 }
 body main section.projetosComunidade .codigo-container .codigo-comunidade .codigo-content {
-  min-height: 28.8rem;
+  height: min(28.8rem, 90%);
   border: 2.4rem solid #9AFF6B;
   width: 100%;
   border-radius: 0.8rem;
@@ -211,8 +227,10 @@ body main section.projetosComunidade .codigo-container .codigo-comunidade .codig
   border: none;
   height: 20rem;
   font-size: 1.1rem;
+  text-overflow: clip;
 }
 body main section.projetosComunidade .codigo-container .codigo-comunidade .projeto-dados {
+  min-height: 10.9rem;
   margin: 2.4rem 0 0 2.4rem;
 }
 body main section.projetosComunidade .codigo-container .codigo-comunidade .projeto-dados > article .projeto-titulo {
@@ -228,6 +246,12 @@ body main section.projetosComunidade .codigo-container .codigo-comunidade .proje
   display: flex;
   align-items: center;
   justify-content: space-between;
+  opacity: 0;
+  transition: 1.25s opacity;
+}
+body main section.projetosComunidade .codigo-container .codigo-comunidade .projeto-dados .projeto-social.active {
+  transition: 0.5s opacity;
+  opacity: 1;
 }
 body main section.projetosComunidade .codigo-container .codigo-comunidade .projeto-dados .projeto-social .projeto-interacoes {
   display: flex;
@@ -241,17 +265,27 @@ body main section.projetosComunidade .codigo-container .codigo-comunidade .proje
 }
 body main section.projetosComunidade .codigo-container .codigo-comunidade .projeto-dados .projeto-social .projeto-interacoes > span > img {
   margin-right: 1rem;
+  cursor: pointer;
 }
 body main section.projetosComunidade .codigo-container .codigo-comunidade .projeto-dados .projeto-social .projeto-autor {
   display: flex;
   align-items: center;
   font-size: 1.6rem;
+  cursor: pointer;
 }
 body main section.projetosComunidade .codigo-container .codigo-comunidade .projeto-dados .projeto-social .projeto-autor > img {
   margin-right: 0.8rem;
 }
 
 @media (max-width: 1024px) {
+  body .main-header #barraPesquisa {
+    display: none;
+    visibility: hidden;
+  }
+  body .main-header .perfil-usuario {
+    display: none;
+    visibility: hidden;
+  }
   body main {
     justify-content: center;
     padding: 0;

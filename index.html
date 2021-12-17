@@ -34,6 +34,16 @@
           <p id="nome-usuario">Harry</p>
         </button>
       </div>
+
+      <div class="mobile-header-interacoes">
+        <button id="mobileBarraPesquisa">
+          <img src="./images/mobile-pesquisa.svg" alt="">
+        </button>
+
+        <button id="mobilePerfil">
+          <img src="./images/mobile-menu.svg" alt="">
+        </button>
+      </div>
     </header>
 
     <main>
@@ -68,13 +78,12 @@
             </header>
 
             <pre>
-              <code id="areaCodigo" contenteditable="true" >
-const teste = document.querySelector('#popcorn')
+              <code id="areaCodigo" contenteditable="true" class="nohighlight" >const teste = document.querySelector('#popcorn')
 () => {} 
               
-teste.addEventListener('click', () => console.log('HAHAHA'))
-function test() {
-  return
+teste.addEventListener('click', () => console.log('test'))
+function test(param) {
+  return param++
 }
               </code>
             </pre>
@@ -123,7 +132,7 @@ function test() {
       </section>
 
       <section class="projetosComunidade">
-        <ul class="codigo-container">
+        <ul class="codigo-container" id="codigosComunidade">
           <li class="codigo-comunidade">
             <div class="codigo-content">
               <header class="botoes-mac">
@@ -309,6 +318,6 @@ const unfold = (f, seed) => {
     </main>
     <script src="./main.js" type="module"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/highlight.min.js"></script>
-    <script>setTimeout(hljs.highlightAll, 3000 )</script>
+    <script>//hljs.highlightAll()</script>
   </body>
 </html>

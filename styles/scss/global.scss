@@ -143,6 +143,19 @@ body {
                 }
             }
         }
+
+        .mobile-header-interacoes {
+            display: none;
+            visibility: hidden;
+            > button {
+              border: none;
+              background-color: transparent;
+    
+              &:first-child {
+                margin-right: 3.2rem;
+              }
+            }
+          }
     }
     //global main settings
     main {
@@ -217,12 +230,15 @@ body {
 
 @media(max-width: 1024px) {
     body {
-        header.main-header {
-            
-            
+        header.main-header {          
             #barraPesquisa {
                 width: 43.1rem;
-                margin-right: 0;
+                margin-right: 0;  
+            }
+
+            .mobile-header-interacoes {
+                display: block;
+                visibility: visible;
             }
         }
 

@@ -117,6 +117,17 @@ body header.main-header .perfil-usuario .perfil-opcoes #foto-usuario {
 body header.main-header .perfil-usuario .perfil-opcoes #nome-usuario {
   color: #ffffff;
 }
+body header.main-header .mobile-header-interacoes {
+  display: none;
+  visibility: hidden;
+}
+body header.main-header .mobile-header-interacoes > button {
+  border: none;
+  background-color: transparent;
+}
+body header.main-header .mobile-header-interacoes > button:first-child {
+  margin-right: 3.2rem;
+}
 body main {
   display: flex;
   padding: 0 3.2rem;
@@ -172,6 +183,10 @@ body main section.projetosComunidade.active {
   body header.main-header #barraPesquisa {
     width: 43.1rem;
     margin-right: 0;
+  }
+  body header.main-header .mobile-header-interacoes {
+    display: block;
+    visibility: visible;
   }
   body main section.nav-section {
     display: none;
@@ -278,6 +293,7 @@ body main section.criacao-projeto .dados-projeto #salvarProjeto {
     flex-wrap: wrap;
     width: 100%;
     margin-bottom: 4rem;
+    padding: 0 1.6rem;
   }
   body main section.criacao-projeto .codigo-container {
     width: 100%;

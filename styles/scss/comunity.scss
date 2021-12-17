@@ -2,6 +2,7 @@
 
 body {
   main {
+
     section.projetosComunidade {
       max-width: 1064px;
       display: none;
@@ -11,15 +12,16 @@ body {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        flex-wrap: wrap;
+        flex-direction: row-reverse;
+        flex-wrap: wrap-reverse;
         
         
         .codigo-comunidade {
-          width: 52rem;
-          margin-bottom: 2.4rem;
+          width: min(52rem, 90%);
+          margin-bottom:  2.4rem;
 
           .codigo-content {
-            min-height: 28.8rem;
+            height: min(28.8rem, 90%);
             border: 2.4rem solid #9AFF6B;
             width: 100%;
             border-radius: 0.8rem;
@@ -41,10 +43,12 @@ body {
               border: none;
               height: 20rem;
               font-size: 1.1rem;
+              text-overflow: clip;
             }
           }
 
           .projeto-dados {
+            min-height: 10.9rem;
             margin: 2.4rem 0 0 2.4rem;
 
             > article {
@@ -63,6 +67,13 @@ body {
               display: flex;
               align-items: center;
               justify-content: space-between;
+              opacity: 0;
+              transition: 1.25s opacity;
+
+              &.active {
+                transition: 0.5s opacity;  
+                opacity: 1;
+              }
 
               .projeto-interacoes {
                 display: flex;
@@ -73,9 +84,11 @@ body {
                   align-items: center;
                   margin-right: 1.8rem;
                   font-size: 1.6rem;
+                  
 
                   > img {
                     margin-right: 1rem;
+                    cursor: pointer;
                   }
                 }
               }
@@ -84,7 +97,8 @@ body {
                 display: flex;
                 align-items: center;
                 font-size: 1.6rem;
-                
+                cursor: pointer;
+
                 > img {
                   margin-right: 0.8rem;
                 }
@@ -99,6 +113,17 @@ body {
 
 @media(max-width: 1024px) {
   body {
+    .main-header {
+      #barraPesquisa {
+        display: none;
+        visibility: hidden;
+      }
+      .perfil-usuario {
+        display: none;
+        visibility: hidden;
+      }
+    }
+
     main {
       justify-content: center;
       padding: 0; 
