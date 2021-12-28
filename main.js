@@ -1,9 +1,10 @@
 import { comunidade } from './scripts/codigoComunidade.js'
 import { editor } from './scripts/editorCodigo.js'
-import { menu } from './scripts/menuOptions.js'
+import { menu, menuMobile } from './scripts/menuOptions.js'
 
 menu.mostrarComunidade()
 menu.mostrarEditor()
+menuMobile.abrir()
 
 editor.alterarCor()
 editor.dados()

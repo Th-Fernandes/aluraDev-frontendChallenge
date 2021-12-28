@@ -4,7 +4,7 @@ const comunidade = {
 
     listaCodigos.innerHTML += `
     <li class="codigo-comunidade">
-            <div class="codigo-content">
+            <div class="codigo-content" style="border: 2.5rem solid ${codigo.corBorda}">
               <header class="botoes-mac">
                 <img src="./images/mac-red.svg" alt="" />
                 <img src="./images/mac-yellow.svg" alt="" />
@@ -12,9 +12,9 @@ const comunidade = {
               </header>
 
               <pre>
-                
-${codigo.codigo}
-
+                <code id="areaCodigo"> 
+  ${codigo.codigo}
+                </code>
               </pre>
             </div>
 
@@ -54,6 +54,9 @@ ${codigo.codigo}
             </div>
           </li>
     `
+    //pra adicionar o hover ao adicionar novos posts
+    this.dadosHover()
+    this.posts()
   },
   //responsável por alterar a direção da coluna do elemento pai dos posts, a depender da quantidade de filhos
   estiloPosts() {
@@ -79,9 +82,13 @@ ${codigo.codigo}
       interacoes.addEventListener('mouseout', () => {
         interacoes.classList.remove('active')
       })
-    }
+    } 
+  },
 
-    
+  posts() {
+    const posts = document.querySelector('#codigosComunidade')
+
+    return posts.children
   }
 }
 

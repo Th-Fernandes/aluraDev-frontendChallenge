@@ -10,6 +10,18 @@
     filter: blur(0px);
   }
 }
+@keyframes down {
+  from {
+    height: 0vh;
+    opacity: 0;
+    filter: blur(2px);
+  }
+  to {
+    height: 100vh;
+    opacity: 1;
+    filter: blur(0);
+  }
+}
 * {
   padding: 0;
   margin: 0;
@@ -55,6 +67,9 @@ html button {
 }
 html textarea {
   resize: none;
+}
+html code {
+  white-space: pre-wrap;
 }
 
 :root {
@@ -128,6 +143,10 @@ body header.main-header .mobile-header-interacoes > button {
 body header.main-header .mobile-header-interacoes > button:first-child {
   margin-right: 3.2rem;
 }
+body header.main-header .mobile-menu {
+  display: none;
+  visibility: hidden;
+}
 body main {
   display: flex;
   padding: 0 3.2rem;
@@ -184,9 +203,58 @@ body main section.projetosComunidade.active {
     width: 43.1rem;
     margin-right: 0;
   }
+  body header.main-header .perfil-usuario {
+    display: none;
+    visibility: hidden;
+  }
   body header.main-header .mobile-header-interacoes {
     display: block;
     visibility: visible;
+  }
+  body header.main-header .mobile-menu {
+    padding: 2.4rem 0 0 2.4rem;
+    position: absolute;
+    min-width: 25.4rem;
+    height: 90vh;
+    background-color: #2D415B;
+    border-radius: 8px;
+    top: 10vh;
+    right: 0;
+    z-index: 2;
+  }
+  body header.main-header .mobile-menu.active {
+    display: block;
+    visibility: inherit;
+    animation: 0.5s down;
+  }
+  body header.main-header .mobile-menu .mobile-opcoes-menu .mobile-opcao-menu:not(:last-child) {
+    margin-bottom: 1.6rem;
+  }
+  body header.main-header .mobile-menu .mobile-opcoes-menu .mobile-opcao-menu > button {
+    border: none;
+    background-color: transparent;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    font-size: 1.6rem;
+  }
+  body header.main-header .mobile-menu .mobile-opcoes-menu .mobile-opcao-menu > button > img {
+    margin-right: 1.6rem;
+  }
+  body header.main-header .mobile-menu .mobile-opcoes-menu::after {
+    content: "";
+    display: block;
+    width: 20.6rem;
+    margin: 2.4rem auto 3.6rem;
+    background-color: rgba(255, 255, 255, 0.3);
+    height: 1px;
+  }
+  body header.main-header .mobile-menu .mobile-perfil {
+    display: flex;
+    align-items: center;
+  }
+  body header.main-header .mobile-menu .mobile-perfil > img {
+    margin-right: 0.8rem;
   }
   body main section.nav-section {
     display: none;

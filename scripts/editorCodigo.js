@@ -19,8 +19,9 @@ const editor = {
       const titulo = document.querySelector('#nomeProjeto').value
       const descricao = document.querySelector('#descricaoProjeto').value 
       const codigo = document.querySelector('#areaCodigo').textContent
+      const corBorda = document.querySelector('#corProjeto').value
 
-      const dadosProjeto = {titulo, descricao, codigo}
+      const dadosProjeto = {titulo, descricao, codigo, corBorda}
 
       comunidade.postarCodigo(dadosProjeto)
 

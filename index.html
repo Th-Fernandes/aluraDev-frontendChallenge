@@ -23,6 +23,7 @@
   <body>
     <header class="main-header">
       <img src="./images/Logo.svg" alt="alura dev logo" id="logo" />
+
       <input id="barraPesquisa" type="text" placeholder="Busque por algo" />
       <div class="perfil-usuario">
         <button class="perfil-opcoes">
@@ -44,6 +45,28 @@
           <img src="./images/mobile-menu.svg" alt="">
         </button>
       </div>
+
+      <nav class="mobile-menu">
+        <ul class="mobile-opcoes-menu">
+          <li class="mobile-opcao-menu">
+            <button id="mobileEditorCodigo">
+              <img class="mobile-opcao-icone" src="./images/editor.svg" alt="">
+              <p>Editor de código</p>
+            </button>
+          </li>
+          <li class="mobile-opcao-menu">
+            <button id="mobile-comunidadeOpcao">
+              <img class="mobile-opcao-icone" src="./images/comunidade.svg" alt="">
+              <p>Comunidade</p>
+            </button>
+          </li>
+        </ul>
+
+        <div class="mobile-perfil">
+          <img src="./images/foto-perfil.svg" alt="" id="mobileFotoUsuario">
+          <span id="mobileNomeUsuario">Harry</span>
+        </div>
+      </nav>
     </header>
 
     <main>
@@ -316,6 +339,7 @@ const unfold = (f, seed) => {
         </ul>
       </section>
     </main>
+
     <script src="./main.js" type="module"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/highlight.min.js"></script>
     <script>//hljs.highlightAll()</script>

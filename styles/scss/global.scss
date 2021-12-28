@@ -4,6 +4,7 @@ $blue-300: #5081FB;
 $blue-200: #7BA4FC;
 $blue-100: #96B9FD;
 $white: #ffffff;
+$mobile-dark-blue: #2D415B;
 
 @keyframes up {
     from {
@@ -15,6 +16,19 @@ $white: #ffffff;
         top: 0px; 
         opacity: 1; 
         filter: blur(0px)
+    }
+}
+
+@keyframes down {
+    from {
+        height: 0vh;
+        opacity: 0;
+        filter: blur(2px);
+    }
+    to {
+        height: 100vh;
+        opacity: 1;
+        filter: blur(0);
     }
 }
 
@@ -74,6 +88,10 @@ html {
     //global textarea settings
     textarea {
         resize: none;
+    }
+    //global code settings
+    code {
+        white-space: pre-wrap;
     }
 }
 // global text settings
@@ -155,7 +173,12 @@ body {
                 margin-right: 3.2rem;
               }
             }
-          }
+        }
+
+        .mobile-menu {
+            display: none;
+            visibility: hidden;
+        }
     }
     //global main settings
     main {
@@ -236,9 +259,73 @@ body {
                 margin-right: 0;  
             }
 
+            .perfil-usuario {
+                display: none;
+                visibility: hidden;
+            }
+
             .mobile-header-interacoes {
                 display: block;
                 visibility: visible;
+            }
+
+            .mobile-menu {
+                padding: 2.4rem 0 0 2.4rem;
+                position: absolute;
+                min-width: 25.4rem;
+                height: 90vh;
+                background-color: $mobile-dark-blue;
+                border-radius: 8px;
+                top: 10vh;
+                right: 0;
+                z-index: 2;
+                
+                &.active {
+                    display: block;
+                    visibility: inherit;
+                    animation: 0.5s down;
+                   
+                }
+
+                .mobile-opcoes-menu {
+                    .mobile-opcao-menu {
+                        &:not(:last-child) {
+                            margin-bottom: 1.6rem;
+                        }
+                        > button {
+                            border: none;
+                            background-color: transparent;
+                            color: $white;
+                            display: flex;
+                            align-items: center;
+                            font-size: 1.6rem;
+    
+                            > img {
+                                margin-right: 1.6rem;
+                            }
+                        }
+                    }
+
+                    &::after {
+                        content: "";
+                        display: block;
+                        width: 20.6rem;
+                        margin: 2.4rem auto 3.6rem;
+                        background-color: rgba($color: $white, $alpha: 0.3);                        height: 1px;
+
+                        
+
+                    }
+                }
+
+                .mobile-perfil {
+                    display: flex;
+                    align-items: center;
+
+                    > img {
+                        margin-right: 0.8rem;
+                    }
+                }
             }
         }
 
