@@ -270,8 +270,7 @@ body main section.projetosComunidade .codigo-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-direction: row-reverse;
-  flex-wrap: wrap-reverse;
+  flex-wrap: wrap;
 }
 body main section.projetosComunidade .codigo-container .codigo-comunidade {
   width: min(52rem, 90%);
@@ -300,6 +299,9 @@ body main section.projetosComunidade .codigo-container .codigo-comunidade .codig
 body main section.projetosComunidade .codigo-container .codigo-comunidade .projeto-dados {
   min-height: 10.9rem;
   margin: 2.4rem 0 0 2.4rem;
+}
+body main section.projetosComunidade .codigo-container .codigo-comunidade .projeto-dados > article {
+  min-height: 4.96rem;
 }
 body main section.projetosComunidade .codigo-container .codigo-comunidade .projeto-dados > article .projeto-titulo {
   font-size: 2.1rem;

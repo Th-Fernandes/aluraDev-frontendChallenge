@@ -12,8 +12,8 @@ body {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        flex-direction: row-reverse;
-        flex-wrap: wrap-reverse;
+        //flex-direction: row-reverse;
+        flex-wrap: wrap;
         
         
         .codigo-comunidade {
@@ -52,6 +52,7 @@ body {
             margin: 2.4rem 0 0 2.4rem;
 
             > article {
+              min-height: 4.96rem;
               .projeto-titulo {
                 font-size: 2.1rem;
                 margin-bottom: 0.8rem;

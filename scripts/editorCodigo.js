@@ -1,4 +1,4 @@
-import { comunidade } from "./codigoComunidade.js"
+import { comunidade, Post, posts } from "./codigoComunidade.js"
 
 const editor = {
   alterarCor() {
@@ -23,9 +23,12 @@ const editor = {
 
       const dadosProjeto = {titulo, descricao, codigo, corBorda}
 
-      comunidade.postarCodigo(dadosProjeto)
+      
 
-      comunidade.estiloPosts()
+
+      posts.push(new Post({tituloPost: titulo, descricaoPost: descricao}))
+      comunidade.postarCodigo(dadosProjeto)
+      console.log(posts)
     })
   },
 
